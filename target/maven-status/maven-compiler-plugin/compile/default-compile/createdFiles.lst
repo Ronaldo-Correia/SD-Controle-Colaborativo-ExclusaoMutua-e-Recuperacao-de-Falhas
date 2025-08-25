@@ -1,0 +1,9 @@
+br\ifba\saj\distribuido\Main.class
+br\ifba\saj\distribuido\coordinator\CoordinatorServer$Request.class
+br\ifba\saj\distribuido\model\LamportClock.class
+br\ifba\saj\distribuido\model\MessageType.class
+br\ifba\saj\distribuido\node\NodeClient$1.class
+br\ifba\saj\distribuido\coordinator\CoordinatorServer$1.class
+br\ifba\saj\distribuido\model\Message.class
+br\ifba\saj\distribuido\node\NodeClient.class
+br\ifba\saj\distribuido\coordinator\CoordinatorServer.class
