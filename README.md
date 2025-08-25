@@ -72,8 +72,11 @@ Deve aparecer: [COORD] Listening on 5000
 ```
 mvn exec:exec -Dexec.executable="java" -Dexec.args="-cp %classpath br.ifba.saj.distribuido.node.NodeClient 1"```
 ```
-mvn exec:exec -Dexec.executable="java" -Dexec.args="-cp %classpath br.ifba.saj.distribuido.node.NodeClient 2"```
 ```
-mvn exec:exec -Dexec.executable="java" -Dexec.args="-cp %classpath br.ifba.saj.distribuido.node.NodeClient 3"```
+mvn exec:exec -Dexec.executable="java" -Dexec.args="-cp %classpath br.ifba.saj.distribuido.node.NodeClient 2"
+```
+```
+mvn exec:exec -Dexec.executable="java" -Dexec.args="-cp %classpath br.ifba.saj.distribuido.node.NodeClient 3"
+```
 O número passado (1, 2, 3) representa o PID do nó.
    
