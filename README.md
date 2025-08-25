@@ -59,9 +59,9 @@ br.ifba.saj.distribuido
 
 ## 👨‍💻Como Executar
 1. 📥Clone este repositório:
-   ```bash
-   git clone https://github.com/Ronaldo-Correia/SD-Controle-Colaborativo-ExclusaoMutua-e-Recuperacao-de-Falhas.git
-   ```
+```bash
+git clone https://github.com/Ronaldo-Correia/SD-Controle-Colaborativo-ExclusaoMutua-e-Recuperacao-de-Falhas.git
+```
 2. 🧪 Executando o Projeto
 Inicie o Coordenador (servidor central):
 ```
