@@ -33,6 +33,7 @@ Projetar, implementar e avaliar um sistema distribuído que simule o acesso conc
 ---
 
 ## 📁Estrutura do Projeto
+```
 br.ifba.saj.distribuido
 ├── coordinator          # Coordenador Central (servidor principal do sistema)
 │   └── CoordinatorServer.java
@@ -46,6 +47,7 @@ br.ifba.saj.distribuido
 │   └── MessageType.java      # Enum com os tipos de mensagens (JOIN, REQUEST, GRANT etc.)
 │
 └── Main.java            # Classe opcional para inicialização ou testes
+```
 
 ---
 ## 🚀 Requisitos
