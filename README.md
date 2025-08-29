@@ -40,6 +40,7 @@ br.ifba.saj.distribuido
 │
 ├── node                 # Nós replicados (clientes que acessam o recurso compartilhado)
 │   └── NodeClient.java
+    └── NodeState.java
 │
 ├── model                # Modelos de dados e classes utilitárias
 │   ├── LamportClock.java     # Implementação do relógio lógico de Lamport
@@ -47,6 +48,11 @@ br.ifba.saj.distribuido
 │   └── MessageType.java      # Enum com os tipos de mensagens (JOIN, REQUEST, GRANT etc.)
 │
 └── Main.java            # Classe opcional para inicialização ou testes
+└── node-1-checkpoint.json
+└── node-2-checkpoint.json
+└── node-3-checkpoint.json
+└── node-4-checkpoint.json
+└── node-3-precrash.json
 ```
 
 ---
