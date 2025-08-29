@@ -91,7 +91,7 @@ Deve aparecer: [COORD] Listening on 5000
  
 3. Inicie os nós clientes (em terminais diferentes):
 ```
-mvn exec:exec -Dexec.executable="java" -Dexec.args="-cp %classpath br.ifba.saj.distribuido.node.NodeClient 1"```
+mvn exec:exec -Dexec.executable="java" -Dexec.args="-cp %classpath br.ifba.saj.distribuido.node.NodeClient 1"
 ```
 ```
 mvn exec:exec -Dexec.executable="java" -Dexec.args="-cp %classpath br.ifba.saj.distribuido.node.NodeClient 2"
