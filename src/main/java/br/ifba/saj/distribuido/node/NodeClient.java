@@ -40,9 +40,15 @@ public class NodeClient {
         this.simulateDelay = simulateDelay;
         this.simulateCrashOnNextOp = simulateCrashOnNextOp;
 
+        // carrega checkpoint ANTES de se juntar
+        state.loadCheckpoint();
+        System.out.println("[NODE " + pid + "] Checkpoint inicial carregado. Counter=" + state.getCounter());
+
         startBackgroundTasks();
         join();
         listen();
+
+
     }
 
     private void startBackgroundTasks() {
