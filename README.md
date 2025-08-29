@@ -34,25 +34,38 @@ Projetar, implementar e avaliar um sistema distribuído que simule o acesso conc
 
 ## 📁Estrutura do Projeto
 ```
-br.ifba.saj.distribuido
-├── coordinator          # Coordenador Central (servidor principal do sistema)
-│   └── CoordinatorServer.java
+SD-CONTROLE
+├── .vscode/                      # Configurações específicas do VS Code
+│   └── settings.json
 │
-├── node                 # Nós replicados (clientes que acessam o recurso compartilhado)
-│   └── NodeClient.java
-    └── NodeState.java
+├── src/main/java/br/ifb/        # Pacote base do projeto
+│   ├── coordinator/             # Coordenador Central (servidor principal)
+│   │   └── CoordinatorServer.java
+│   │
+│   ├── node/                    # Nós replicados (clientes que acessam o recurso compartilhado)
+│   │   ├── NodeClient.java
+│   │   └── NodeState.java
+│   │
+│   └── model/                   # Modelos de dados e utilitários
+│       ├── LamportClock.java       # Implementação do relógio lógico de Lamport
+│       ├── Message.java            # Estrutura de mensagem trocada entre os nós e o coordenador
+│       └── MessageType.java        # Enum com os tipos de mensagens (JOIN, REQUEST, GRANT etc.)
 │
-├── model                # Modelos de dados e classes utilitárias
-│   ├── LamportClock.java     # Implementação do relógio lógico de Lamport
-│   ├── Message.java          # Estrutura de mensagem trocada entre os nós e o coordenador
-│   └── MessageType.java      # Enum com os tipos de mensagens (JOIN, REQUEST, GRANT etc.)
+├── target/                      # Diretório de saída do Maven
+│   ├── classes/
+│   ├── generated-sources/
+│   ├── maven-archiver/
+│   ├── maven-status/
+│   └── sistema-distribuido-1.0-SNAPSHOT.jar
 │
-└── Main.java            # Classe opcional para inicialização ou testes
-└── node-1-checkpoint.json
-└── node-2-checkpoint.json
-└── node-3-checkpoint.json
-└── node-4-checkpoint.json
-└── node-3-precrash.json
+├── node-1-checkpoint.json       # Checkpoint do nó 1
+├── node-2-checkpoint.json       # Checkpoint do nó 2
+├── node-3-checkpoint.json       # Checkpoint do nó 3
+├── node-3-precrash.json         # Estado pré-falha do nó 3
+│
+├── pom.xml                      # Arquivo de configuração do Maven
+└── README.md                    # Documentação do projeto
+
 ```
 
 ---
