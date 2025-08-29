@@ -1,4 +1,7 @@
+br\ifba\saj\distribuido\node\NodeClient$CounterPayload.class
+br\ifba\saj\distribuido\node\NodeState.class
 br\ifba\saj\distribuido\Main.class
+br\ifba\saj\distribuido\node\NodeState$StateSnapshot.class
 br\ifba\saj\distribuido\coordinator\CoordinatorServer$Request.class
 br\ifba\saj\distribuido\model\LamportClock.class
 br\ifba\saj\distribuido\model\MessageType.class
