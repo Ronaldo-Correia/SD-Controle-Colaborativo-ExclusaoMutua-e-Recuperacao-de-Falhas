@@ -9,15 +9,8 @@ import java.nio.file.*;
 import java.util.Random;
 import java.util.concurrent.*;
 
-/**
- * NodeClient adaptado para:
- * - checkpoint periódico
- * - pré-imagem (snapshot) antes do DO_OP
- * - aplicar STATE apenas se lamportTs > last
- * - simular atraso e crash via args:
- * --delay : ativa atraso (sleep) durante doCriticalOperation
- * --crash : crasha durante a próxima operação crítica
- */
+//NodeCliente reajustada, adcionando checkpoint periodico, pre-imagem antes do DO_OP, 
+//aplicar STATE apenas se lamportTs > last, simular atraso e crash via args: delay e crash.
 public class NodeClient {
     public final int pid;
     private final LamportClock clock;
@@ -119,7 +112,7 @@ public class NodeClient {
         state.setCounterAndTs(novo, lamportTs);
         System.out.println("[NODE " + pid + "] DO_OP aplicado localmente -> " + novo + " (ts=" + lamportTs + ")");
 
-        // salva checkpoint logo após operação (opcional)
+        // salva checkpoint logo após operação
         state.saveCheckpoint();
 
         // envia DO_OP ao coordenador (coordenador aplica globalmente)

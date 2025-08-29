@@ -8,12 +8,8 @@ import java.net.*;
 import java.util.*;
 import java.util.concurrent.*;
 
-/**
- * Versão adaptada para:
- * - Registrar sockets dos nós no JOIN
- * - Broadcast assíncrono de STATE para todos nós
- * - Enviar ROLLBACK a todos os nós
- */
+//Foi reajustada com a adição de registro de sockets dos nós no JOIN, 
+//broadcast assíncrono de STATE para todos os nós e envio de ROLLBACK a todos os nós. 
 public class CoordinatorServer {
     private static final int PORT = 5000;
     private static int sharedCounter = 0;
@@ -99,7 +95,7 @@ public class CoordinatorServer {
                         tryGrantNext();
                     }
                     default -> {
-                        // ignorar outros tipos aqui
+
                     }
                 }
             }
@@ -156,7 +152,7 @@ public class CoordinatorServer {
                 }
                 try {
                     writer.println(gson.toJson(state));
-                    // opcional: log por node
+
                     System.out.println("[COORD] STATE enviado -> pid=" + targetPid + " counter=" + novoValor + " (ts="
                             + lamportTs + ")");
                 } catch (Exception ex) {
@@ -166,8 +162,7 @@ public class CoordinatorServer {
         }
     }
 
-    // método para pedir rollback globalmente (pode ser chamado manualmente para
-    // testes)
+    // método para pedir rollback globalmente (comunicando todos os nós)
     public static void requestGlobalRollback(String reason) {
         System.out.println("[COORD] Solicitando rollback global: " + reason);
         Gson gson = new Gson();
@@ -195,6 +190,6 @@ public class CoordinatorServer {
     private static void handleClientDisconnect(Socket client) {
         // remove sockets/writers que usam esse socket
         nodeSockets.entrySet().removeIf(entry -> entry.getValue().equals(client));
-        nodeWriters.entrySet().removeIf(entry -> entry.getValue().checkError()); // tentativa simples
+        nodeWriters.entrySet().removeIf(entry -> entry.getValue().checkError());
     }
 }
