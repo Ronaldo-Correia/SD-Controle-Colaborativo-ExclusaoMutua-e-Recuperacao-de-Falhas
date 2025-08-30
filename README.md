@@ -82,14 +82,14 @@ SD-CONTROLE
 git clone https://github.com/Ronaldo-Correia/SD-Controle-Colaborativo-ExclusaoMutua-e-Recuperacao-de-Falhas.git
 ```
 2. 🧪 Executando o Projeto
-Inicie o Coordenador (servidor central):
+Inicie o Coordenador (No CMD ative o servidor central):
 ```
 mvn exec:exec -Dexec.executable="java" -Dexec.args="-cp %classpath br.ifba.saj.distribuido.coordinator.CoordinatorServer"
 ```
 
 Deve aparecer: [COORD] Listening on 5000
  
-3. Inicie os nós clientes (em terminais diferentes):
+3. Inicie os nós clientes (No CMD em terminais diferentes):
 ```
 mvn exec:exec -Dexec.executable="java" -Dexec.args="-cp %classpath br.ifba.saj.distribuido.node.NodeClient 1"
 ```
